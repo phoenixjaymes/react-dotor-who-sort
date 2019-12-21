@@ -1,33 +1,91 @@
-.App {
+body {
+  background: #000;
+  padding-top: 76px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+main {
+  background: #f33;
+}
+
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-gap: 3px;
+}
+
+.character-list li {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.character-list li img {
+  max-width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.doctors {
+  background: #ffbb68
 }
 
-.App-link {
-  color: #61dafb;
+.companions {
+  background: #ffcc8e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.allies {
+  background: #ffddb3;
+}
+
+.villains {
+  background: #ffeed9;
+}
+
+
+.img-wrap {
+  position: relative;
+}
+
+.img-wrap__btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  background: #ff0;
+  border: none;
+  height: 20px;
+  line-height: 20px;
+  padding: 0;
+  text-align: center;
+  width: 20px;
+}
+
+.img-wrap__info {
+  position: fixed;
+  left: calc(50% - 100px);
+  top: calc(50% - 50px);
+  z-index: 100;
+
+  background: rgba(220, 220, 220, .9);
+  display: none;
+  height: 100px;
+  padding-top: 30px;
+  width: 200px;
+}
+
+.img-wrap__info.show {
+  display: block;
+}
+
+.img-wrap__info.hide {
+  display: none;
+}
+
+.img-wrap__btn-close {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+
+  background: orangered;
+  border: 2px solid orange;
 }
